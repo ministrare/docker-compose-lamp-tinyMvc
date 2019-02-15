@@ -1,12 +1,13 @@
 # LAMP stack built with Docker Compose
 
-This is a basic LAMP stack environment built using Docker Compose. It consists following:
+This is a basic LAMP stack environment built using Docker Compose and TinyMVC. It consists following:
 
 
 * PHP 7.2
 * Apache 2.4
 * MySQL 5.7
 * phpMyAdmin
+* TinyMvc
 
 As of now, we have 3 different branches for different PHP versions. Use appropriate branch as per your php version need:
 * [5.6.x](https://github.com/ministrare/docker-compose-lamp/tree/5.6.x)
@@ -19,12 +20,12 @@ As of now, we have 3 different branches for different PHP versions. Use appropri
 Clone this repository on your local computer. Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/ministrare/docker-compose-lamp.git
-cd docker-compose-lamp/
+git clone https://github.com/ministrare/docker-compose-lamp-tinyMvc.git
+cd docker-compose-lamp-tinyMvc/
 docker-compose up -d
 ```
 
-Your LAMP stack is now ready!! You can access it via `http://localhost`.
+Your LAMP stack is now ready!! You can access it via `http://localhost:8001`.
 
 ## Configuration
 
@@ -60,7 +61,7 @@ This will be used to store Apache logs. The default value for this is `./logs/my
 
 ## Web Server
 
-Apache is configured to run on port 80. So, you can access it via `http://localhost`.
+Apache is configured to run on port 80. So, you can access it via `http://localhost:8001`.
 
 #### Apache Modules
 
@@ -107,9 +108,9 @@ By default following extensions are installed.
 
 phpMyAdmin is configured to run on port 8080. Use following default credentials.
 
-http://localhost:8080/  
+http://localhost:8002/  
 username: root  
-password: tiger
+password: root
 
 ## Redis
 
